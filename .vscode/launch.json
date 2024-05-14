@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "trace": true,
+    "configurations": [
+        {
+            "name": "Debug with OpenOCD",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/bootloader.elf",       
+            "configFiles": ["./cfg/openocd.cfg"],
+            "runToEntryPoint": "main"
+        }
+
+        
+    ]
+}

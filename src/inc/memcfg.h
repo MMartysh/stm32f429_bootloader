@@ -1,0 +1,19 @@
+#ifndef MEMCFG_H
+#define MEMCFG_H
+
+#define FLASH_BOOT_START 0x08000000
+#define FLASH_BOOT_SIZE  0x10000
+
+#define FLASH_APP_START (FLASH_BOOT_START + FLASH_BOOT_SIZE)
+#define FLASH_APP_SIZE   0x10000
+
+#define SRAM1_START      0x20000000
+#define SRAM1_SIZE       0x1C000
+
+#define SRAM2_START      (SRAM1_START + SRAM1_SIZE)
+#define SRAM2_SIZE       0x4000
+
+#define SRAM3_START      (SRAM2_START + SRAM2_SIZE)
+#define SRAM3_SIZE       0x10000
+
+#endif

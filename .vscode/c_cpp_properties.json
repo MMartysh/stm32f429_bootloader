@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "${workspaceRoot}/import/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceRoot}/import/CMSIS/Include",
+                "${workspaceRoot}/import/STM32F4xx_HAL_Driver/Inc",
+                "${workspaceRoot}/src/inc",
+                "${workspaceRoot}/src/core",
+                "/lib/arm-none-eabi/include",
+                "/lib/arm-none-eabi/include/sys",
+                "/lib/arm-none-eabi/include/c++/10.3.1"
+            ],
+            "defines": [
+                "STM32F429xx",
+                "__weak=\"__attribute__((weak))\"",
+                "__packed=\"__attribute__((__packed__))\""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "${workspaceRoot}/import/CMSIS/Device/ST/STM32F4xx/Include",
+                    "${workspaceRoot}/import/CMSIS/Include",
+                    "${workspaceRoot}/import/STM32F4xx_HAL_Driver/Inc",
+                    "${workspaceRoot}/src/inc",
+                    "${workspaceRoot}/src/core",
+                    "/lib/arm-none-eabi/include",
+                    "/lib/arm-none-eabi/include/sys",
+                    "/lib/arm-none-eabi/include/c++/10.3.1"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 3
+}
