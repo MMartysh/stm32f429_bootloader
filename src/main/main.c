@@ -66,5 +66,13 @@ int main(void)
     while (1)
     {
         timerPerformCheck();
+        if(getUpdStatus())
+        {
+            receivePacket();
+        }
+        else
+        {
+            terminalGetChar();
+        }
     }
 }

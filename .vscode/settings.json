@@ -1,4 +1,4 @@
 {
     "cmake.configureOnOpen": true,
-    "cortex-debug.variableUseNaturalFormat": false
+    "cortex-debug.variableUseNaturalFormat": true
 }

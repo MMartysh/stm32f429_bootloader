@@ -47,6 +47,9 @@ import/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c \
 import/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c \
 import/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c \
 import/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c \
+import/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c \
+import/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c \
+src/terminal.c \
 src/board.c \
 src/errorHandlers.c \
 src/gpio_ctrl.c \
