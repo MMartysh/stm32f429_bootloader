@@ -104,10 +104,10 @@ if __name__ == "__main__":
 
     send_upd_init(ser,filename)
     time.sleep(1)
-    if (filesize % (LPCTP_MAX_PAYLOAD)) == 0:
-        packets_to_tx = int(filesize / (LPCTP_MAX_PAYLOAD))
+    if (filesize % (FRAME_SIZE)) == 0:
+        packets_to_tx = int(filesize / (FRAME_SIZE))
     else:
-        packets_to_tx = int(filesize / (LPCTP_MAX_PAYLOAD)) + 1
+        packets_to_tx = int(filesize / (FRAME_SIZE)) + 1
     packets_tx = int(0)
     clear = lambda: os.system('cls')
     for pack in range(packets_to_tx):
