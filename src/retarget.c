@@ -1,4 +1,4 @@
-#include "inc/retarget.h"
+#include "retarget.h"
 #include <stdio.h>
 #include <stdbool.h>
 #include "unistd.h"
