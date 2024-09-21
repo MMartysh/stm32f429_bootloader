@@ -9,6 +9,7 @@
 #include "timer_ctrl.h"
 #include "retarget.h"
 #include "memcfg.h"
+#include "terminal.h"
 
 static void ledTimerFunc(void);
 
