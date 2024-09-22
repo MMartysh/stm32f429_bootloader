@@ -15,6 +15,10 @@
         {
             "name": "import",
             "path": "import"
+        },
+        {
+            "name": "build",
+            "path": "build"
         }
     ],
     "settings": {

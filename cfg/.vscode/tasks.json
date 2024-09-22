@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Upload firmware",
+            "dependsOn": "Erase firmware",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", 
+                "interface/stlink.cfg",
+                "-f", 
+                "target/stm32f4x.cfg", 
+                "-c", 
+                "\"init;halt;reset halt;flash write_image ../build/bootloader.hex;shutdown\""
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Erase firmware",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", 
+                "interface/stlink.cfg",
+                "-f", 
+                "target/stm32f4x.cfg", 
+                "-c", 
+                "\"init;halt;reset halt;flash erase_address 0x08000000 0x10000;shutdown\""
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

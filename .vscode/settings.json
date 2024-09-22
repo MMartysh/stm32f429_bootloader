@@ -1,5 +1,0 @@
-{
-    "cmake.configureOnOpen": true,
-    "cortex-debug.variableUseNaturalFormat": true,
-    "cmake.sourceDirectory": "/home/martysh/Projects/stm32bootcmake/stm32f429_bootloader/cfg"
-}
