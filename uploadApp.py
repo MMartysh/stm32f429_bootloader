@@ -24,10 +24,8 @@ def send_upd_init(ser, filename):
     fileSize = os.path.getsize(filename)
     fileContent = open(filename,'rb').read()
     fileCrc = crc32mpeg2(fileContent)
-    message = str("update " + str(fileSize)+ " " + str(fileCrc) + '\r')
-    b = bytearray()
-    b.extend(map(ord, message))
-    ser.write(b)
+    message = str("update " + str(fileSize)+ " " + str(fileCrc) + "\r")
+    ser.write(message.encode('ascii'))
 
 '''
 Sends update message
@@ -67,7 +65,7 @@ Receives message and send echo
 '''   
 def receive_response(ser):
     received_message = ser.read()
-    if received_message != 0x79:
+    if received_message != b'y':
         print(received_message)
         print("Flash write fail")
         ser.close()
@@ -95,7 +93,7 @@ if __name__ == "__main__":
     rc = 0
     device_1 = args[0]
     baudrate = int(115200)
-    timeout_uart = float(0.05)
+    timeout_uart = float(0.1)
     filename = args[1]
     binFile = open(filename, "rb")
     filesize = os.path.getsize(filename)
@@ -109,13 +107,13 @@ if __name__ == "__main__":
     else:
         packets_to_tx = int(filesize / (FRAME_SIZE)) + 1
     packets_tx = int(0)
-    clear = lambda: os.system('cls')
+ 
     for pack in range(packets_to_tx):
-        clear()
         packets_tx = packets_tx + 1
         print("Frames sent", packets_tx, "out of", packets_to_tx) 
         send_upd_packet(ser, binFile, pack, filesize)
         receive_response(ser)
+        time.sleep(0.001)
     binFile.close()
     ser.close()
     sys.exit(rc)
